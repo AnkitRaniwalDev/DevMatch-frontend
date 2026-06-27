@@ -24,7 +24,7 @@ const Bio = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e :any) => {
     e.preventDefault();
     console.log("Saving Data:", formData);
     try {
