@@ -16,7 +16,7 @@ const Bio = () => {
   });
 
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
