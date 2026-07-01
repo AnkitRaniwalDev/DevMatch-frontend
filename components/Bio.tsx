@@ -45,7 +45,7 @@ const Bio = () => {
         console.error("Server responded with an error:", data);
         alert("Error saving bio: " + (data.message || "Unknown error"));
       }
-    } catch (error) {
+    } catch (error:any) {
       console.error("Network Error (Backend off?):", error);
       alert("Network error: " + error.message);
 
