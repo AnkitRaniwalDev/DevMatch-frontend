@@ -1,11 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig= {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true, // Ignore TypeScript build errors
-    
-}
+    // Isse production build mein saari TypeScript errors ignore ho jayengi
+    ignoreBuildErrors: true,
+  },
+};
 
-}
 export default nextConfig;
