@@ -28,7 +28,7 @@ const Bio = () => {
     e.preventDefault();
     console.log("Saving Data:", formData);
     try {
-      const response = await fetch("http://localhost:8000/api/bio", {
+      const response = await fetch("https://devmatch-backend-72iu.onrender.com/api/bio", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

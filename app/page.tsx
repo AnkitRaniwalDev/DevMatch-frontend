@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
   const getUsers= async (search ="") => {
     try {
-      const response = await fetch(`http://localhost:8000/api/all?search=${search}`, {
+      const response = await fetch(`https://devmatch-backend-72iu.onrender.com/api/all?search=${search}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

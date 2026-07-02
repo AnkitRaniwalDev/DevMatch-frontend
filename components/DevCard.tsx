@@ -26,7 +26,7 @@ const DevCard = ({ user }: DevCardProps) => {
   const  ConnectToChat= async (receiverId: string) => {
     console.log("Connecting to chat with user ID:", receiverId);
   try {
-    const res = await fetch(`http://localhost:8000/api/request/${receiverId}`, {
+    const res = await fetch(`https://devmatch-backend-72iu.onrender.com/api/request/${receiverId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

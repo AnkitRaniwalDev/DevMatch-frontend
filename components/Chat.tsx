@@ -18,7 +18,7 @@ const ChatPage = () => {
   // backend se frind list ko lana 
   useEffect(() => {
     const fetchFriends = async () => {
-      const res = await fetch("http://localhost:8000/api/chat/friends", {
+      const res = await fetch("https://devmatch-backend-72iu.onrender.com/api/chat/friends", {
         method: "GET",
         credentials: "include",
       });
@@ -35,7 +35,7 @@ const ChatPage = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       if (!selectedChat) return;
-      const res = await fetch(`http://localhost:8000/api/chat/get/${selectedChat.otherUser._id}`, {
+      const res = await fetch(`https://devmatch-backend-72iu.onrender.com/api/chat/get/${selectedChat.otherUser._id}`, {
         method: "GET",
         credentials: "include",
       });
@@ -49,7 +49,7 @@ const ChatPage = () => {
   const handleSendMessage = async () => {
     if (!newMessage.trim() || !selectedChat) return;
 
-    const res = await fetch("http://localhost:8000/api/chat/send", {
+    const res = await fetch("https://devmatch-backend-72iu.onrender.com/api/chat/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ receiverId: selectedChat.otherUser._id, message: newMessage }),

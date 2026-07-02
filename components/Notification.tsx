@@ -28,7 +28,7 @@ const NotificationPage = () => {
   const fetchNotifications = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`http://localhost:8000/api/notifications`, {
+      const res = await fetch(`https://devmatch-backend-72iu.onrender.com/api/notifications`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -58,7 +58,7 @@ const NotificationPage = () => {
   // notifications ko accept ya ignor karne ke liye backend me request bhejne ka function, taki wo database me update ho jaye aur user ko apni notifications me sahi status dikhai de
   const handleReview = async (requestId: string, status: "accepted" | "rejected") => {
     try {
-      const res = await fetch(`http://localhost:8000/api/review`, {
+      const res = await fetch(`https://devmatch-backend-72iu.onrender.com/api/review`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
